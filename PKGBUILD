@@ -35,6 +35,6 @@ pkgver() {
 }
 
 package() {
-    cp "${srcdir}"/wofi-calc/wofi-calc ~/.local/bin/rofi-calc
+    cp "${srcdir}"/wofi-calc/wofi-calc.sh ~/.local/bin/rofi-calc
     chmod u+x ~/.local/bin/wofi-calc
 }
