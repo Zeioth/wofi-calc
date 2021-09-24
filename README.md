@@ -12,3 +12,7 @@ A simple calculator for wofi, inspired in rofi-calc.
 ## To use it run
 
     wofi-calc
+
+## TODOS:
+
+* Optimize the script to emulate rofi-calc in a closest way. Currently there's a noticeable delay delay between operations.
