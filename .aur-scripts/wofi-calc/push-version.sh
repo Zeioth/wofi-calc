@@ -1,4 +1,6 @@
 # Description: Generates a new aur release.
+# WARNING: make sure you push all changes before running this.
+#          or you may experience inconsistences.
 
 #-----------------------------------------------------------------------------
 # TODO: On github/gitlab, create automation to create git version per tag
@@ -13,10 +15,10 @@ sed -i "s/^sha256sums=.*/$(makepkg -g -f -p PKGBUILD)/" ./PKGBUILD
 git tag $(printf "v1.0.r%s" "$(git rev-list --count HEAD)")
 
 # Generate pagkage metadata
-makepkg --printsrcinfo > .SRCINFO
+makepkg --printsrcinfo > ./.SRCINFO
 
 # Push it to AUR
-git add PKGBUILD .SRCINFO
+git add ./PKGBUILD ./.SRCINFO
 git commit -m "New version"
 git push ssh://aur@aur.archlinux.org/wofi-calc.git master
 
