@@ -35,6 +35,6 @@ pkgver() {
 }
 
 package() {
-    cp "${srcdir}"/wofi-calc/wofi-calc.sh ~/.local/bin/wofi-calc
-    chmod u+x ~/.local/bin/wofi-calc
+  mkdir -p "$pkgdir"/usr/bin
+  install -m755 "${srcdir}"/wofi-calc/wofi-calc.sh "$pkgdir"/usr/bin/wofi-calc
 }
