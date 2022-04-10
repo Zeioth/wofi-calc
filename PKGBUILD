@@ -1,32 +1,18 @@
-# This is an example PKGBUILD file. Use this as a start to creating your own,
-# and remove these comments. For more information, see 'man PKGBUILD'.
-# NOTE: Please fill out the license field for your package! If it is unknown,
-# then please put 'unknown'.
-
 # Maintainer: Adrian Lopez <zeioth@hotmail.com>
+
 pkgname=wofi-calc
 pkgver=1.0
-pkgrel=1
-epoch=
+pkgrel=2
 pkgdesc="A simple calculator for wofi, inspired in rofi-calc."
-arch=(x86_64 i686)
-url="https://github.com/Zeioth/wofi-calc.git"
+arch=('any')
+url='https://github.com/Zeioth/wofi-calc'
 license=('MIT')
-groups=()
 depends=(wofi libqalculate)
 makedepends=(wofi libqalculate)
-checkdepends=()
-optdepends=()
 provides=(wofi-calc)
-conflicts=(wofi-calc)
-replaces=()
-backup=()
-options=()
-install=
-changelog=
-source=("git+$url")
-noextract=()
-md5sums=('SKIP')
+conflicts=(wofi-calc-git)
+source=(https://raw.githubusercontent.com/Zeioth/wofi-calc/main/wofi-calc.sh)
+sha512sums=('34592bacfa7b58f8f327095fada0fa7d4d1b79f975994e4c6e9679ebe97c8355ad02edee357835c05977fb2c6ebb87f3db4cbc363446a67d8dbf316740a080b0')
 validpgpkeys=()
 
 pkgver() {
