@@ -6,13 +6,9 @@ A simple calculator for wofi, inspired in rofi-calc.
     yay -S wofi-calc
 
 ## Install from github
-    
+
     makepkg -sri
 
 ## To use it run
 
     wofi-calc
-    
-## Changelog → Changes of 'wofi-calc-git' compared with 'wofi-calc'
-
-    * wofi-calc now installs in /usr/bin instead of ~/.local/bin to make it available to all users.
