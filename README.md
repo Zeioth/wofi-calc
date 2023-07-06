@@ -14,4 +14,4 @@ A simple calculator for wofi, inspired in rofi-calc.
     wofi-calc
 
 ## 🌟 Support the project
-If you want to help me, please star this repository to increase the visibility of the project.
+Please star this repository to increase the visibility of the project.
