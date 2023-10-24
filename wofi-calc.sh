@@ -15,8 +15,8 @@ do
   rtrn=$?
 
   if test "$rtrn" = "0"; then
-    if [[ "$WOFI_RET" =~ .*=.* ]]; then
-      RESULT=`echo "$WOFI_RET" | awk {'print $NF'}`
+    if [[ "$WOFI_RET" =~ .*≈.* || "$WOFI_RET" =~ .*=.* ]]; then
+      RESULT=`echo "$WOFI_RET" | awk -F '[=≈]' {'print $2'} | xargs`
       wl-copy "$RESULT"
       exit 0
     else
